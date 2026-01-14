@@ -94,11 +94,30 @@ export function useRoom() {
         throw new Error('邀请码无效');
       }
 
+      // 检查是否为创建者重新进入
+      if (foundRoom.creator_name === partnerName) {
+        setRoom(foundRoom as Room);
+        localStorage.setItem('roomId', foundRoom.id);
+        localStorage.setItem('userRole', 'creator');
+        localStorage.setItem('userName', partnerName);
+        return foundRoom as Room;
+      }
+
+      // 检查是否为伴侣重新进入
+      if (foundRoom.partner_name && foundRoom.partner_name === partnerName) {
+        setRoom(foundRoom as Room);
+        localStorage.setItem('roomId', foundRoom.id);
+        localStorage.setItem('userRole', 'partner');
+        localStorage.setItem('userName', partnerName);
+        return foundRoom as Room;
+      }
+
+      // 房间已有其他伴侣
       if (foundRoom.partner_name) {
         throw new Error('该房间已满');
       }
 
-      // 更新房间，添加伴侣
+      // 新伴侣加入，更新房间
       const { data, error: updateError } = await supabase
         .from('t_rooms')
         .update({ partner_name: partnerName })
