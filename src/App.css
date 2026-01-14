@@ -1,0 +1,26 @@
+/* 全局样式重置 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fafafa;
+  color: #333;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 移动端适配 */
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+}

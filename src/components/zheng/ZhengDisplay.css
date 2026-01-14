@@ -1,0 +1,33 @@
+.zheng-display {
+  text-align: center;
+  padding: 16px;
+}
+
+.zheng-display.empty {
+  opacity: 0.6;
+}
+
+.zheng-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  min-height: 60px;
+  align-items: center;
+}
+
+.empty-placeholder {
+  opacity: 0.3;
+}
+
+.empty-text {
+  color: #999;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.total-count {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666;
+}

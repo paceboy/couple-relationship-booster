@@ -1,0 +1,139 @@
+.main-page {
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+.main-page.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.main-header h1 {
+  font-size: 18px;
+  margin: 0;
+  color: #333;
+}
+
+.menu-btn,
+.history-btn {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.menu-btn:hover,
+.history-btn:hover {
+  color: #ff6b6b;
+}
+
+.zheng-comparison {
+  display: flex;
+  padding: 24px 16px;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.zheng-section {
+  flex: 1;
+  background: white;
+  border-radius: 16px;
+  padding: 20px 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.zheng-section h2 {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 16px;
+  font-weight: normal;
+}
+
+.zheng-section.self {
+  border-top: 3px solid #ff6b6b;
+}
+
+.zheng-section.other {
+  border-top: 3px solid #6b9fff;
+}
+
+.vs-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.vs-divider span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.comparison-result {
+  text-align: center;
+  padding: 0 20px 20px;
+}
+
+.comparison-result p {
+  font-size: 14px;
+  padding: 12px 16px;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.comparison-result .ahead {
+  background: #fff5f5;
+  color: #ff6b6b;
+}
+
+.comparison-result .behind {
+  background: #f5f8ff;
+  color: #6b9fff;
+}
+
+.comparison-result .equal {
+  background: #f5fff5;
+  color: #5cb85c;
+}
+
+.comparison-result strong {
+  font-weight: 600;
+}
+
+.add-record-btn {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 20px 30px;
+  padding: 16px;
+  background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-record-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}

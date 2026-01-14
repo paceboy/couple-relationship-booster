@@ -1,0 +1,149 @@
+/* 记录表单 */
+.record-form-container {
+  padding: 16px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.record-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.record-form-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.cancel-btn,
+.submit-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.cancel-btn {
+  color: #666;
+}
+
+.submit-btn {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.record-form-container form textarea {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  resize: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.record-form-container form textarea:focus {
+  outline: none;
+  border-color: #ff6b6b;
+}
+
+.quick-tags {
+  margin-top: 20px;
+}
+
+.tags-label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tags-list button {
+  padding: 8px 16px;
+  background: #f5f5f5;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tags-list button:hover {
+  background: #ffe8e8;
+  color: #ff6b6b;
+}
+
+/* 记录列表 */
+.record-list {
+  padding: 16px;
+}
+
+.record-list.empty {
+  text-align: center;
+  color: #999;
+  padding: 40px 16px;
+}
+
+.record-list h3 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+  font-weight: normal;
+}
+
+.record-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.record-item {
+  padding: 12px 16px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.record-item.self {
+  background: #fff5f5;
+  border-left: 3px solid #ff6b6b;
+}
+
+.record-item.other {
+  background: #f5f8ff;
+  border-left: 3px solid #6b9fff;
+}
+
+.record-author {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.record-content {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.record-time {
+  font-size: 12px;
+  color: #bbb;
+  margin-top: 6px;
+  text-align: right;
+}

@@ -1,0 +1,30 @@
+.zheng-character {
+  display: inline-block;
+}
+
+.zheng-character .stroke {
+  fill: none;
+  stroke: #333;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: opacity 0.1s ease;
+}
+
+/* 显示状态 - 带书写动画 */
+.zheng-character .stroke.visible {
+  opacity: 1;
+  animation: draw-stroke 0.4s ease forwards;
+}
+
+@keyframes draw-stroke {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
