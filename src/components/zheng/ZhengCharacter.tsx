@@ -44,35 +44,35 @@ export default function ZhengCharacter({
     >
       {/* 第1笔：上横 */}
       <path
-        d="M 15 20 L 85 20"
+        d="M 15 15 L 85 15"
         className={`stroke ${displayStrokes >= 1 ? 'visible' : ''}`}
         style={{ stroke: color }}
       />
 
-      {/* 第2笔：左竖 */}
+      {/* 第2笔：中短竖（从上横往下到底） */}
       <path
-        d="M 30 20 L 30 80"
+        d="M 50 15 L 50 85"
         className={`stroke ${displayStrokes >= 2 ? 'visible' : ''}`}
         style={{ stroke: color }}
       />
 
-      {/* 第3笔：中横 */}
+      {/* 第3笔：右短横（从中短竖向右） */}
       <path
-        d="M 15 50 L 85 50"
+        d="M 50 52 L 80 52"
         className={`stroke ${displayStrokes >= 3 ? 'visible' : ''}`}
         style={{ stroke: color }}
       />
 
-      {/* 第4笔：右竖 */}
+      {/* 第4笔：左短竖（在左边，从中横位置往下） */}
       <path
-        d="M 70 20 L 70 80"
+        d="M 30 52 L 30 85"
         className={`stroke ${displayStrokes >= 4 ? 'visible' : ''}`}
         style={{ stroke: color }}
       />
 
       {/* 第5笔：下横 */}
       <path
-        d="M 15 80 L 85 80"
+        d="M 15 85 L 85 85"
         className={`stroke ${displayStrokes >= 5 ? 'visible' : ''}`}
         style={{ stroke: color }}
       />
