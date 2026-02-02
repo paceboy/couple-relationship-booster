@@ -13,7 +13,7 @@ export default function MainPage() {
   const { room, leaveRoom } = useRoom();
   const roomId = localStorage.getItem('roomId');
   const userRole = localStorage.getItem('userRole') as 'creator' | 'partner';
-  const { records, loading, addRecord, newRecordId } = useRecords(roomId);
+  const { records, loading, addRecord, deleteRecord, updateRecord, newRecordId } = useRecords(roomId);
   const [showForm, setShowForm] = useState(false);
   const [showRecords, setShowRecords] = useState(false);
 
@@ -88,6 +88,8 @@ export default function MainPage() {
           creatorName={room.creator_name}
           partnerName={room.partner_name || '等待加入'}
           currentRole={userRole}
+          onDelete={deleteRecord}
+          onUpdate={updateRecord}
         />
       ) : (
         <>

@@ -147,3 +147,107 @@
   margin-top: 6px;
   text-align: right;
 }
+
+/* 记录头部 */
+.record-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+/* 操作按钮组 */
+.record-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.edit-btn {
+  color: #666;
+}
+
+.edit-btn:hover {
+  background: #e8e8e8;
+  color: #333;
+}
+
+.delete-btn {
+  color: #999;
+}
+
+.delete-btn:hover {
+  background: #ffe8e8;
+  color: #ff6b6b;
+}
+
+/* 编辑表单 */
+.edit-form {
+  margin-top: 8px;
+}
+
+.edit-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.edit-form textarea:focus {
+  outline: none;
+  border-color: #ff6b6b;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cancel-edit-btn,
+.save-edit-btn {
+  padding: 6px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-edit-btn {
+  background: #f0f0f0;
+  color: #666;
+}
+
+.cancel-edit-btn:hover:not(:disabled) {
+  background: #e0e0e0;
+}
+
+.save-edit-btn {
+  background: #ff6b6b;
+  color: white;
+}
+
+.save-edit-btn:hover:not(:disabled) {
+  background: #ff5252;
+}
+
+.save-edit-btn:disabled,
+.cancel-edit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

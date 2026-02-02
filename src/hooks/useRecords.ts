@@ -55,6 +55,11 @@ export function useRecords(roomId: string | null) {
             setRecords((prev) =>
               prev.filter((r) => r.id !== (payload.old as Record).id)
             );
+          } else if (payload.eventType === 'UPDATE') {
+            const updatedRecord = payload.new as Record;
+            setRecords((prev) =>
+              prev.map((r) => (r.id === updatedRecord.id ? updatedRecord : r))
+            );
           }
         }
       )
@@ -96,11 +101,25 @@ export function useRecords(roomId: string | null) {
     if (error) throw error;
   }, []);
 
+  // 更新记录
+  const updateRecord = useCallback(async (recordId: string, content: string) => {
+    const { data, error } = await supabase
+      .from('t_records')
+      .update({ content })
+      .eq('id', recordId)
+      .select()
+      .single();
+
+    if (error) throw error;
+    return data as Record;
+  }, []);
+
   return {
     records,
     loading,
     addRecord,
     deleteRecord,
+    updateRecord,
     newRecordId,
   };
 }
